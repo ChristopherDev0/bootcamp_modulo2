@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manos a la obra 2-3</title>
+</head>
+<body>
+
+    <h1>Feedback Form</h1>
+
+    <br>
+
+    <form action="/procesar.php" method="GET">
+        <ul>
+            <li>
+                <label for="name">Tu Nombre:</label>
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="primer nombre" 
+                id="name" 
+                minlength="3" 
+                maxlength="50"
+                required>
+            </li>
+            <br>
+            <li>
+                <label for="email">Tu numero de E-mail:</label>
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="E-mail personal" 
+                id="email" 
+                required>
+            </li>
+            <br>
+            <li>
+                <label for="password">Tu contraseña:</label>
+                <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="contraseña" 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required>
+            </li>
+            <br>
+            
+            <fieldset>
+                <legend>Selecciona el tema de tu mensaje:</legend>
+                <label>
+                    <input type="radio" name="tema" value="consulta" required>
+                    Consulta
+                </label>
+                <label>
+                    <input type="radio" name="tema" value="sugerencia" required>
+                    Sugerencia
+                </label>
+                <label>
+                    <input type="radio" name="tema" value="problema" required>
+                    Problema
+                </label>
+            </fieldset>
+
+            <br>
+
+            <li>
+                <label for="mensage">Tu mensage: </label>
+                <textarea 
+                name="mesage" 
+                id="mesage" 
+                cols="30" 
+                rows="5" 
+                required 
+                placeholder="Tu mensage"
+                minlength="10" 
+                maxlength="500"
+                ></textarea>
+            </li>
+            
+        </ul>
+
+        <br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+    
+</body>
+</html>
